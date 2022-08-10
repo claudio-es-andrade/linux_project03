@@ -13,3 +13,15 @@ echo \
 
 apt-get update -y
 apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+echo "Baixando a Imagem com MySQL e Python e rodando o arquivo Docker-Compose e Dockerfile..."
+docker-compose up -d
+
+echo "Verificando as imagens no sistema..."
+docker images
+
+echo "Checando os Container no sistema..."
+docker ps -a
+
+echo "Executando o projeto..."
+docker-compose run app
